@@ -4,10 +4,24 @@
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        <h1>  #2 Formから送信された値を表示してみよう。(結果)</h1>
-          <div>
-　　　　　　<%= "お名前は「#{@name}」さんですね。" %>
-          </div>
+        <h1>  #2 Formから送信された値を表示してみよう。(一覧)</h1>
+        <table border="1">
+          <caption>ひとこと一覧</caption>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @messages.each do |message| %>
+            <tr>
+              <td><%= message.id %></td>
+              <td><%= message.content %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
             <a href="/">戻る</a>
     </body>
 </html>
