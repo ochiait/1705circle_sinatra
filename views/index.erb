@@ -1,13 +1,22 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Sinatraで基礎概念の確認</title>
-        <link rel="stylesheet" href="/style.css">
-    </head>
-    <body>
-       <h1>Sinatraで基礎概念の確認</h1>    　
-    　<div>
-    　   <a href="/message_new"> #2 Formから送信された値を表示してみよう。</a>
-    　</div>
-    </body>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Sinatraで基礎概念の確認</title>
+</head>
+<body>
+    <h1>ひとこと一覧</h1>
+    <ul>
+        <% @messages.each do |message| %>
+        <li>
+            <%= message.id %>.<%= message.content %>
+        </li>
+        <% end %>
+    </ul>
+    <h2>何かひとこと↓</h2>
+    <form action="new" method="post">
+        <input type="text" name="content">
+        <input type="submit">
+    </form>
+</body>
 </html>

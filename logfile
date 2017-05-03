@@ -14,3 +14,10 @@ FATAL:  lock file "postmaster.pid" already exists
 HINT:  Is another postmaster (PID 1727) running in data directory "/usr/local/var/postgres"?
 FATAL:  lock file "postmaster.pid" already exists
 HINT:  Is another postmaster (PID 1727) running in data directory "/usr/local/var/postgres"?
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 1727) running in data directory "/usr/local/var/postgres"?
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 1727) running in data directory "/usr/local/var/postgres"?
+LOG:  received SIGHUP, reloading configuration files
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 1727) running in data directory "/usr/local/var/postgres"?

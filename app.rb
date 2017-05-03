@@ -10,22 +10,11 @@ class Message < ActiveRecord::Base
 end
 
 get '/' do
-
+  @messages = Message.all
   erb :index
 end
 
-get '/message_new' do
-  erb :form
-end
-
-post '/messages' do
-  content = params[:content]
-  message = Message.new({content: content})
-  message.save
-  redirect :result
-end
-
-get '/result' do
-  @messages = Message.all
-  erb :result
+post '/new' do
+    Message.create({:content => params[:content]})
+    redirect '/'
 end
