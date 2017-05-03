@@ -10,6 +10,7 @@
         <% @messages.each do |message| %>
         <li>
             <%= message.id %>.<%= message.content %>
+            <a href="/<%= message.id %>">[編集]</a>
         </li>
         <% end %>
     </ul>

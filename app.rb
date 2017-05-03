@@ -15,6 +15,23 @@ get '/' do
 end
 
 post '/new' do
-    Message.create({:content => params[:content]})
-    redirect '/'
+  Message.create({:content => params[:content]})
+  redirect '/'
+end
+
+get '/:id' do
+  @message = Message.find_by(params[:id])
+  erb :edit
+end
+
+put '/:id' do
+  message = Message.find_by(params[:id])
+  message.content = params[:content]
+  message.save
+  erb :complete
+end
+
+get '/:id/delete' do
+  Message.find(params[:id]).destroy
+  erb :complete
 end

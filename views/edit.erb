@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Sinatraで基礎概念の確認</title>
+</head>
+<body>
+    <h2>編集、削除画面</h2>
+    <form action="/<%= @message.id %>" method="post" id="edit">
+      <input type="hidden" value="put">
+      <textarea name="content"><%= @message.content %></textarea>
+      <input type="submit">
+    </form>
+    <p><a href="/<%= @message.id %>/delete" method="delete">削除</a></p>
+</body>
+</html>

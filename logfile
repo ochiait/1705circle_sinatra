@@ -21,3 +21,16 @@ HINT:  Is another postmaster (PID 1727) running in data directory "/usr/local/va
 LOG:  received SIGHUP, reloading configuration files
 FATAL:  lock file "postmaster.pid" already exists
 HINT:  Is another postmaster (PID 1727) running in data directory "/usr/local/var/postgres"?
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2017-05-03 22:52:51 JST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 2659) running in data directory "/usr/local/var/postgres"?
+LOG:  received SIGHUP, reloading configuration files
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 2659) running in data directory "/usr/local/var/postgres"?
