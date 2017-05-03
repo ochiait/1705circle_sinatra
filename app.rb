@@ -5,11 +5,11 @@ get '/' do
   erb :index
 end
 
-get '/contact_new' do
+get '/message_new' do
   erb :form
 end
 
-post '/contacts' do
+post '/messages' do
   @name = params[:name]
   erb :result
 end
