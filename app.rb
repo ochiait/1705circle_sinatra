@@ -21,6 +21,9 @@ end
 
 get '/:id' do
   @message = Message.find(params[:id])
+  p "#################"
+  p params[:id]
+  p "#################"
   erb :edit
 end
 
