@@ -20,12 +20,12 @@ post '/new' do
 end
 
 get '/:id' do
-  @message = Message.find_by(params[:id])
+  @message = Message.find(params[:id])
   erb :edit
 end
 
-put '/:id' do
-  message = Message.find_by(params[:id])
+post '/:id' do
+  message = Message.find(params[:id])
   message.content = params[:content]
   message.save
   erb :complete
