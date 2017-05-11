@@ -27,7 +27,7 @@ get '/:id' do
   erb :edit
 end
 
-post '/:id' do
+put '/:id' do
   message = Message.find(params[:id])
   message.content = params[:content]
   message.save

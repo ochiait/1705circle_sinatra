@@ -7,7 +7,7 @@
 <body>
     <h2>編集、削除画面</h2>
     <form action="/<%= @message.id %>" method="post" id="edit">
-      <input type="hidden" value="put">
+      <input type="hidden", name="_method", value="put">
       <textarea name="content"><%= @message.content %></textarea>
       <input type="submit">
     </form>
